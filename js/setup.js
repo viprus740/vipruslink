@@ -1,12 +1,12 @@
 var schema = window.location.hash.substr(1);
-var SSID = schema.substring(1,schema.indexOf('&'));
+var SSID = schema.substring(0,schema.indexOf('&'));
 var PSK = schema.substring(schema.indexOf('&')+1);
 
 var networkName = document.getElementById("SSID");
 var networkPass = document.getElementById("pass");
 
 networkName.textContent += SSID;
-networkPass.textContent += PSK;
+networkPass.textContent = PSK;
 
 var clipboard = new ClipboardJS('.btn');
 
