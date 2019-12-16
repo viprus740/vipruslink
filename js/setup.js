@@ -1,4 +1,4 @@
-var schema = location.search;
+var schema = window.location.hash.substr(1);
 var SSID = schema.substring(1,schema.indexOf('`'));
 var PSK = schema.substring(schema.indexOf('`')+1);
 console.log(schema.indexOf('`'));
